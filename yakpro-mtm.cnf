@@ -1,0 +1,34 @@
+<?php
+// YAK Pro - mysql to mysqli: Config File
+// Do not delete the previous line! it's a magic string for config file!
+//========================================================================
+// Author:  Pascal KISSIAN
+// Resume:  http://pascal.kissian.net
+//
+// CopyRight (c) 2015 Pascal KISSIAN
+//
+// Published under the MIT License
+//          Consider it as a proof of concept!
+//          No warranty of any kind.
+//          Use and abuse at your own risks.
+//========================================================================
+
+
+$conf->t_convert_php_extension      = array('php'); // array where values are extensions of php files to be obfuscated.
+$conf->prettyPrinter                = 'Standard';    // pretty printer mode 'YAK Pro' or 'Standard'
+$conf->default_link_name            = null;         // name of variable containing database link reference ; for example: 'link'
+
+
+$conf->abort_on_error               = true;         // self explanatory
+$conf->confirm                      = true;         // rfu : will answer Y on confirmation request (reserved for future use ... or not...)
+$conf->silent                       = false;        // display or not Information level messages.
+
+
+$conf->source_directory             = null;         // self explanatory
+$conf->target_directory             = null;         // self explanatory
+
+$conf->t_keep                       = null;         // array of directory or file pathnames, to keep 'as is' (i.e. not convert.)
+$conf->t_skip                       = null;         // array of directory or file pathnames, to skip when exploring source tree structure ... they will not be on target!
+
+
+?>
