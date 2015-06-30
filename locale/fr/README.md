@@ -13,6 +13,7 @@ ou alors utilisez git clone.
 Le fichier de configuration yakpro-mtm.cnf est auto-documenté et contient les options de configuration !
 Un petit coup d'oeil vaut le détour.  
 
+Démo : [yakpro-mtm demo](http://mysql-to-mysqli.yakpro.com/?demo).
 
 Pré-requis:  php 5.3 ou supérieur, [PHP-Parser](https://github.com/nikic/PHP-Parser).
 
