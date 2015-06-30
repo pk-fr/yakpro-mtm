@@ -19,9 +19,9 @@ Pré-requis:  php 5.3 ou supérieur, [PHP-Parser](https://github.com/nikic/PHP-P
 
 ## Pourquoi un convertisseur mysql vers mysqli ?
 
-Historiquement, les requètes mysql étaient gérées en php par l'extension mysql.
-Cette extension est obsolète depuis PHP 5.5.0, mais beaucoup de logiciels php l'utilisent encore.
-Dans le futur php7, cette extension est retirée, ce qui est une rupture de rétro-compatibilité !
+Historiquement, les requètes mysql étaient gérées en php par l'extension mysql.  
+Cette extension est obsolète depuis PHP 5.5.0, mais beaucoup de logiciels php l'utilisent encore.  
+Dans le futur php 7, cette extension est retirée, ce qui est une rupture de rétro-compatibilité !
 
 Les quelques alternatives, pour les personnes désireuses de porter leur logiciel sous php7 sont:  
 1) Ré-écriture complète avec PDO, qui est une couche d'abstraction de bases de données.  
@@ -32,7 +32,7 @@ Les quelques alternatives, pour les personnes désireuses de porter leur logicie
    Ce convertisseur utilise la forme procédurale, qui est assez similaire à celle de mysql.  
 
    
-Malheureusemet, il y a pas mal de différences entre les appels à mysql et à mysqli.  
+Malheureusemet, il y a de nombreuses différences entre les appels à mysql et à mysqli.
 On peut citer entre autres :
  - Des nouveaux paramètres (beaucoup de fonctions mysqli requièrent le paramètre "link").
  - L'ordre des paramètres de plusieurs fonctions à changé.
@@ -119,7 +119,6 @@ Supprime récursivement le répertoire répertoire_cible/yakpro-mtm
       Utilisez votre propre fichier yakpro-mtm.cnf ( par exemple à la racine de votre projet )
 
       Lorsque vous travaillez sur des répertoires,
-      le contexte est sauvegardé afin de ré-utiliser la même table de traduction.
       Lorsque vous modifiez un ou plusieurs fichier, yapro-mtm utilise l'horodatage des fichiers
       pour ne re-convertir que les fichiers modifiés depuis la conversion précédente.
       Celà vous permettra de gagner un temps précieux !
