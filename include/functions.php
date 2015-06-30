@@ -25,7 +25,7 @@ function convert_file($filename)                   // takes a file_path as input
         $source = file_get_contents($filename);
         fprintf(STDERR,"Converting %s%s",$filename,PHP_EOL);
         // var_dump( token_get_all($source));    exit;
-        $stmts  = $parser->parse($source/*.PHP_EOL.PHP_EOL*/);  // PHP-Parser returns the syntax tree
+        $stmts  = $parser->parse($source.PHP_EOL.PHP_EOL);  // PHP-Parser returns the syntax tree
 
         if ($debug_mode) var_dump($stmts);
         
