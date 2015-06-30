@@ -239,7 +239,7 @@ class MyNodeVisitor extends PhpParser\NodeVisitorAbstract       // see PHP-Parse
                             $new_name   = 'mysqli_data_seek';
                             $new_name   = "// yakpro-mtm TODO: verify that you didn't use mysql_result(\$index,'tablename.fieldname') 2nd parameter style".PHP_EOL.$new_name;
                             
-                            $t_infos[$node->name->getLine()][] = "$name(...) -> $new_name(...) ? mysqli_fetch_assoc(...) : null ";
+                            $t_infos[$node->name->getLine()][] = "$name(...) -> $new_name(...) ? mysqli_fetch_assoc(...) : false ";
                             $node->name->parts[count($parts)-1] = $new_name;
                             $t_args = $node->args;
                             $t_args_0   = array();
