@@ -19,18 +19,18 @@ Prerequisites:  php 5.3 or higher, [PHP-Parser](https://github.com/nikic/PHP-Par
 
 ## Why a mysql to mysqli converter?
 
-Legacy php access to MySql was made using the mysql extension interface.
-The mysql extension is deprecated as of PHP 5.5.0, but many legacy php programs still use mysql.
-The comming php7 will completly remove the mysql extension, which is a bacwkard compatibility break!
+Legacy php access to MySql was made using the mysql extension interface.  
+The mysql extension is deprecated as of PHP 5.5.0, but many legacy php programs still use mysql.  
+The comming php 7 will completly remove the mysql extension, which is a bacwkard compatibility break!
 
-There are a few alternatives for people wanting to port their php scripts on php 7.
-1) Rewrite their software with PDO, which is a database abstraction layer.
-   The programming logic is not the same, it requires a lot of work.
-2) Rewrite their software with mysqli, which have 2 interfaces styles;
+There are a few alternatives for people wanting to port their php scripts on php 7.  
+1) Rewrite their software with PDO, which is a database abstraction layer.  
+   The programming logic is not the same, it requires a lot of work.  
+2) Rewrite their software with mysqli, which have 2 interfaces styles;  
    - an object oriented one.  
-   - a procedural one.  
-   This converter, converts mysql to mysqli using the procedural form, which is very similar
-   to the mysql one.
+   - a procedural one.
+   
+This converter, converts mysql to mysqli using the procedural form, which is very similar to the mysql one.  
 
 Unfortunately, there are many changes between the mysql calls and the mysqli ones.
 Among them, youw will find;
