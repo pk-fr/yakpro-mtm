@@ -22,23 +22,19 @@ Pré-requis:  php 5.3 ou supérieur, [PHP-Parser](https://github.com/nikic/PHP-P
 
 Historiquement, les requètes mysql étaient gérées en php par l'extension mysql.  
 Cette extension est obsolète depuis PHP 5.5.0, mais beaucoup de logiciels php l'utilisent encore.  
-Dans le futur php 7, cette extension est retirée, ce qui est une rupture de rétro-compatibilité !
+**Dans le futur php 7, cette extension est retirée**, ce qui constitue une rupture de rétro-compatibilité !
 
-Les quelques alternatives, pour les personnes désireuses de porter leur logiciel sous php7 sont:  
+Les quelques alternatives, pour les personnes désireuses de porter leur logiciel sous **php7** sont:  
 1) Ré-écriture complète avec PDO, qui est une couche d'abstraction de bases de données.  
    La logique d'implémentation n'est pas la même, et requière beaucoup de travail.  
 2) Ré-écriture avec mysqli, qui possède 2 types d'interfaces :  
    - Une interface orientée objet.  
-   - Une interface procédurale.  
-   Ce convertisseur utilise la forme procédurale, qui est assez similaire à celle de mysql.  
+   - Une interface procédurale, assez similaire à celle de mysql, mais avec quelques changements dont entre autre, inversion de l’ordre des paramètres ou nouveaux paramètres nécessaires.  
+  
+Ce convertisseur utilise la forme procédurale.  
+Il est adapté aux personnes qui n’envisagent pas une ré-écriture de leurs anciens programmes impliquant un changement de logique, et qui veulent le porter vers mysqli à moindre coût, en faisant le moins de changements possibles.  
 
    
-Malheureusemet, il y a de nombreuses différences entre les appels à mysql et à mysqli.
-On peut citer entre autres :
- - Des nouveaux paramètres (beaucoup de fonctions mysqli requièrent le paramètre "link").
- - L'ordre des paramètres de plusieurs fonctions à changé.
-
-
 ### Principales fonctionnalités de YAK Pro - mysql to mysqli converter :
 
 - Si votre logiciel utilise toujours le même paramètre "link", vous pouvez le spécifier.
