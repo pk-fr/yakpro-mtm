@@ -29,14 +29,10 @@ There are a few alternatives for people wanting to port their php scripts on php
    The programming logic is not the same, it requires a lot of work.  
 2) Rewrite their software with mysqli, which have 2 interfaces styles;  
    - an object oriented one.  
-   - a procedural one.
+   - a procedural one, very simalar to legacy mysql one, but with few changes like parameter order inversion, and new required parameters.
    
 This converter, converts mysql to mysqli using the procedural form, which is very similar to the mysql one.  
-
-Unfortunately, there are many changes between the mysql calls and the mysqli ones.
-Among them, youw will find;
- - new parameters (many mysqli functions now require the "link" parameter).
- - change of parameters ordering.
+It is best suited for people that do not plan a full rewrite of their old software involving a logic change, but who want to port their software to mysqli at lower cost, minimizing the changes to do.  
  
 
 ### YAK Pro - mysql to mysqli converter Main Features:  
