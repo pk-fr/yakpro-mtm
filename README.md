@@ -22,14 +22,14 @@ Prerequisites:  php 5.3 or higher, [PHP-Parser](https://github.com/nikic/PHP-Par
 
 Legacy php access to MySql was made using the mysql extension interface.  
 The mysql extension is deprecated as of PHP 5.5.0, but many legacy php programs still use mysql.  
-The comming php 7 will completly remove the mysql extension, which is a bacwkard compatibility break!
+The comming **php 7 will completly remove the mysql extension**, which is a bacwkard compatibility break!
 
-There are a few alternatives for people wanting to port their php scripts on php 7.  
+There are a few alternatives for people wanting to port their php scripts on **php 7**.  
 1) Rewrite their software with PDO, which is a database abstraction layer.  
    The programming logic is not the same, it requires a lot of work.  
 2) Rewrite their software with mysqli, which have 2 interfaces styles;  
    - an object oriented one.  
-   - a procedural one, very simalar to legacy mysql one, but with few changes like parameter order inversion, and new required parameters.
+   - a procedural one, very simalar to the legacy mysql one, but with few changes like parameter order inversion, and new required parameters.
    
 This converter, converts mysql to mysqli using the procedural form, which is very similar to the mysql one.  
 It is best suited for people that do not plan a full rewrite of their old software involving a logic change, but who want to port their software to mysqli at lower cost, minimizing the changes to do.  
